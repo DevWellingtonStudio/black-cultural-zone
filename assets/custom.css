@@ -1,0 +1,16 @@
+/*
+Custom CSS
+ */
+
+.narrow-content{
+    margin-left:30px;
+    margin-right:30px;
+}
+
+/*.site-container {
+    max-width: 1879px;
+}*/
+
+.list-style {
+    font-size: 32px;
+}

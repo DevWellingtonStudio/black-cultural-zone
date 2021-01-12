@@ -1,0 +1,46 @@
+/* Footer Widgets
+----------------------------------------------------------------------------- */
+.footer-widgets {
+    border-bottom: 1px solid $hr-border-color;
+    padding: $spacer*4 0;
+    .wrap.container-fluid {
+        width: 90%;
+        max-width: 1700px;
+    }
+
+    ul, ol {
+        @include list-unstyled;
+        li {
+            margin-bottom: $spacer;
+        }
+    }
+    .widgettitle {
+        margin-bottom: $spacer*2;
+    }
+    &.text-muted {
+        .widgettitle {
+            color: #fff;
+        }
+        a {
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    &.bg-primary {
+        a {
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.footer-widgets-1 section,
+.footer-widgets-2 section,
+.footer-widgets-3 section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
