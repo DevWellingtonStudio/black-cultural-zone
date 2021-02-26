@@ -77,6 +77,16 @@ function io_front_page_latest_posts() {
 
   // The Query
   $the_query = new WP_Query( array(
+      'post_type' => 'tribe_events',
+      'post_parent__in' => array( 0 ),
+	  'tax_query' =>  array(
+        array(
+          'taxonomy' => 'tribe_events_cat',
+          'field' => 'slug',
+          'terms' => 'market',
+          'operator' => 'IN'
+        ),
+      ),
 	  'order'          => 'DESC',
 	  'orderby'       => 'date',
 	  'no_found_rows'  => true,
