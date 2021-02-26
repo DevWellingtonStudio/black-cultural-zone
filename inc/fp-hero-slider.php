@@ -8,13 +8,21 @@ $sldr2text		= get_theme_mod('sldr2text', $default );
 $wst_slider3	= get_theme_mod('wst_slider3', $default );
 $slider3title	= get_theme_mod('slider3title', $default );
 $sldr3text		= get_theme_mod('sldr3text', $default );
+
+$default = '';
+
+if($wst_slider1 !== $default) :
 ?>
 <div id="hero-section">
   <div id="wstTopSlider" class="carousel slide carousel-fade" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#wstTopSlider" data-slide-to="0" class="active"></li>
+      <?php if($wst_slider2 !== $default) : ?>
       <li data-target="#wstTopSlider" data-slide-to="1"></li>
+      <?php endif;
+      if($wst_slider3 !== $default) : ?>
       <li data-target="#wstTopSlider" data-slide-to="2"></li>
+      <?php endif; ?>
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -53,3 +61,4 @@ $sldr3text		= get_theme_mod('sldr3text', $default );
     </a>
   </div>
 </div>
+<?php endif; ?>
