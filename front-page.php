@@ -97,12 +97,6 @@ function io_front_page_latest_posts() {
 	  if ( $image = genesis_get_image( 'format=url&size=featured-image' ) ) {
 		printf( '<div class="featured-image"><a href="%s" rel="bookmark"><img src="%s" alt="%s" /></a></div>', get_permalink(), $image, the_title_attribute( 'echo=0' ) );
 	  }
-
-	  /*echo '<h3><a href="';
-	  echo esc_url( the_permalink() );
-	  echo '">';
-	  echo get_the_title();
-	  echo '</a></h3>';*/
         
         echo '<a href="#"><button class="btn-square btn-red news-readmore">Read More</button></a>';
 
