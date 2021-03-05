@@ -74,33 +74,37 @@ echo '<div id="background-one" class="container-fluid">' .
 
 add_action( 'genesis_before_loop', 'io_front_page_latest_posts' );
 function io_front_page_latest_posts() {
+  
+  global $post;
+ 
 
   // The Query
-  $the_query = new WP_Query( array(
-      'post_type' => 'tribe_events',
-      'post_parent__in' => array( 0 ),
-	  'tax_query' =>  array(
+  //$the_query = new WP_Query( array(
+  $the_query = tribe_get_events( array (
+      'posts_per_page'  => 12,
+      'start_date'     => 'today',
+      'eventDisplay'=>'list',
+      'tax_query' =>  array(
         array(
           'taxonomy' => 'tribe_events_cat',
           'field' => 'slug',
-          'terms' => 'market',
-          'operator' => 'IN'
+          'terms' => 'feature-on-front-page'
         ),
       ),
-	  'order'          => 'DESC',
-	  'orderby'       => 'date',
-	  'no_found_rows'  => true,
-	  'posts_per_page' => 12
-  ) );
+  //) );
+));
 
   // The Loop
-  if ( $the_query->have_posts() ) {
+  //if ( $the_query->have_posts() ) {
 	echo '<div class="news-feed-title mt_med text-center"><h2 class="news-feed">FEATURED EVENTS</h2></div>';
 	echo '<div class="container-2">';
 	echo '<div id="fp-news" class="news-fp mt row justify-content-center">';
 
-	while ( $the_query->have_posts() ) {
-	  $the_query->the_post();
+	//while ( $the_query->have_posts() ) {
+	  //$the_query->the_post();
+    foreach ( $the_query as $post ) {
+      setup_postdata( $post );
+   
 
 	  echo '<div class="news-excerpt col-md-4">';
 
@@ -108,7 +112,7 @@ function io_front_page_latest_posts() {
 		printf( '<div class="featured-image"><a href="%s" rel="bookmark"><img src="%s" alt="%s" /></a></div>', get_permalink(), $image, the_title_attribute( 'echo=0' ) );
 	  }
         
-        echo '<a href="#"><button class="btn-square btn-red news-readmore">Read More</button></a>';
+        echo '<a href="'. get_the_permalink() .'"><button class="btn-square btn-red news-readmore">Read More</button></a>';
 
 	  echo '</div>';
 	}
@@ -117,11 +121,11 @@ function io_front_page_latest_posts() {
         </div>';
 
 	/* Restore original Post Data */
-	wp_reset_postdata();
-  } else {
+	//  wp_reset_postdata();
+  //   } else {
 	// no posts found
+  // }
   }
-}
 
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 //add_action( 'genesis_loop', 'child_grid_loop_helper' );
