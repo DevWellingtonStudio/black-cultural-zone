@@ -1,0 +1,16 @@
+/** SCSS Buttons
+---------------------------- */
+
+button {
+  border: none;
+}
+
+.btn-red {
+  background-color: $navred;
+}
+
+.btn-square {
+  padding: .5em 4em;
+  border-radius: 0;
+  color: $white;
+}

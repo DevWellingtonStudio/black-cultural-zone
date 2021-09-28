@@ -1,0 +1,106 @@
+/*!
+ * Theme Name: Black Cultural Zone
+ * Author: Wellington Studio
+ * Author URI: https://wellington-studio.com
+ * Description: Bootstrap-powered Genesis child theme.
+ * Version: 1.0.0
+ * License: GPL-2.0
+ * License URI: http://www.opensource.org/licenses/gpl-license.php
+ * Tags: two-columns, three-columns, left-sidebar, right-sidebar, accessibility-ready, custom-logo, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
+ * Text Domain: wellington-studio-theme
+ * Domain Path: /languages
+ * Template: genesis
+ */
+
+// Global
+@import 'supporting/global';
+
+// Bootstrap Core Variable Override
+@import "supporting/variables-bootstrap-core-override";
+
+// Import Bootstrap Core
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Bootstrap Genesis Theme Variables
+@import "supporting/variables-bootstrap-genesis";
+
+// Screen Reader Classes
+@import "supporting/screen-reader-text";
+
+// Long nonbreaking path name support
+@import "supporting/long-nonbreaking-path-name-support";
+
+// Skip to Main Content - Accessibility Link
+@import "supporting/skip-to-main-content";
+
+// Comments
+@import "supporting/comments";
+
+// Images
+@import "supporting/wordpress-images";
+
+// Table
+@import "supporting/table";
+
+// Widgets
+@import "supporting/widgets";
+
+// Plugins
+@import "supporting/plugin";
+
+// Pagination
+@import "supporting/pagination";
+
+@import "supporting/gallery";
+
+// Navigation
+@import "supporting/nav";
+
+// Header
+@import "supporting/header";
+
+// Jumbotron
+@import "supporting/jumbotron";
+
+// Site Inner
+@import "supporting/site-inner";
+
+// Archive/Blog
+@import "supporting/archive";
+
+// Single Post/Page
+@import "supporting/single";
+
+// Sidebar
+@import "supporting/sidebar";
+
+// Footer Widgets
+@import "supporting/footer-widgets";
+
+// Site Footer
+@import "supporting/footer";
+
+// Custom
+@import "supporting/custom";
+
+// Slider
+@import "supporting/slider";
+
+// Buttons
+@import "supporting/buttons";
+
+// Hero Slider
+@import "supporting/hero-slider";
+
+// Front Page
+@import "supporting/front-page";
+
+// Containers
+@import "supporting/containers";
+
+// Default Template
+@import "supporting/default-template";
+
+// Parallax
+@import "supporting/parallax";
+

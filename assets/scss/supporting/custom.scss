@@ -1,0 +1,211 @@
+/* Custom SCSS
+
+	- Front Page Widgets
+	- Front Page News
+	- Front Page One
+	- Genesis Front Page Loop
+	- Hero Section
+	- Images
+	- Mid Front Page Slider
+	- Nav
+----------------------------------------------------------------------------- */
+
+.mt.row {
+  margin-top: $marginTopx1 !important;
+}
+
+.mb {
+  margin-bottom: $marginBottomx1;
+}
+
+.mt_med {
+  margin-top: $marginTopx2;
+}
+
+.mb_med {
+  margin-bottom: $marginBottomx2;
+}
+
+#sub-nav-fp {
+  background-color: $gray;
+}
+
+/** Front Page Widgets
+================================ */
+
+.frontpage-one,
+.frontpage-two,
+.frontpage-three {
+  width: $fullwidth;
+  margin: $marginTopx1 0 $marginBottomx1 0;
+  padding: $paddingx1;
+}
+
+/** Front Page News
+================================ */
+#fp-news {
+    .news-excerpt {
+      h3 a {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+  }
+
+/** Front Page One
+================================ */
+.frontpage-one .container,
+.frontpage-two .container-2 {
+  display: flex;
+  align-items: center;
+  margin: 2.618rem auto;
+
+  section {
+	margin: auto 2.618em;
+  }
+}
+
+/** Genesis Front Page Loop
+================================ */
+
+
+
+
+/** Hero Section
+================================ */
+#portrait-section {
+  #wstPortraitSlider {
+    .carousel-inner {
+      #portrait-item-one {
+        #portrait-hero {
+          .row {
+            .card-body-wrapper{
+              .card-body {
+                h1 {
+                  text-transform: uppercase;
+                }
+              }
+            }
+          }
+        }
+      }
+      #portrait-item-two {
+        #portrait-hero {
+          .row {
+            .card-body-wrapper{
+              .card-body {
+                h1 {
+                  text-transform: uppercase;
+                }
+              }
+            }
+          }
+        }
+      }
+      #portrait-item-three {
+        #portrait-hero {
+          .row {
+            .card-body-wrapper{
+              .card-body {
+                h1 {
+                  text-transform: uppercase;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.zindex-btn {
+  z-index: 9999;
+  position: relative;
+}
+
+.card-text a {
+  z-index: 9999;
+  position: relative;
+}
+
+/* For full-width customizer setting */
+.wrap.container-fluid {
+
+  #hero-section {
+	width: $fullwidth-plus;
+	margin-left: -7.5%;
+  }
+
+}
+#portrait-hero.card {
+  border-radius: 0;
+  border: none;
+}
+#portrait-hero {
+  .portrait-image {
+	img {
+	  object-fit: cover;
+	  max-height: 900px;
+	}
+	.card-img {
+	  border-radius: 0;
+	}
+  }
+  .card-body {
+	padding: 2.618em;
+	max-height: 900px;
+  }
+  .card-body-wrapper {
+	display: flex;
+  }
+  .card-body-wrapper .card-body {
+	margin: auto;
+  }
+  button h5 {
+	margin: .5em auto;
+  }
+}
+
+/** Images
+=============================== */
+.img-responsive {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/** Mid Front Page Slider
+=============================== */
+#mid-slider-fp-1,
+#mid-slider-fp-2,
+#mid-slider-fp-3 {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  .carousel-caption {
+
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+
+    h3 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/** Nav
+=============================== */
+
+#sub-nav-fp {
+  width: $fullwidth-plus;
+  margin-left: -7.5%;
+  margin-top: -1px;
+}

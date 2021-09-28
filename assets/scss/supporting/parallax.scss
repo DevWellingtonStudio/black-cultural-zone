@@ -1,0 +1,10 @@
+/** SCSS for parallax.js
+-------------------------------------- */
+
+.parallax-window {
+  min-height: 600px;
+  background: transparent;
+}
+.parallax-mirror {
+  z-index: 1 !important;
+}

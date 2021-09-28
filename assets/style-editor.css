@@ -1,0 +1,20 @@
+/* Editor Styles*/
+
+body {
+    background-color: #d3ebf3;
+    color: #00005d;
+}
+/* Main column width */
+.wp-block {
+    max-width: 720px;
+}
+
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+    max-width: 1080px;
+}
+
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+    max-width: none;
+}

@@ -1,0 +1,287 @@
+/* Navbar
+----------------------------------------------------------------------------- */
+.dropdown-item {
+    color: #212529 !important;
+}
+button.navbar-toggler:focus {
+    border: none;
+    outline: none;
+}
+.navbar-brand {
+    img {
+        max-width: 70%;
+    }
+}
+.navbar-expand-xl {
+    .navbar-nav {
+        max-width: 1210px;
+        display: inline-flex;
+        flex-flow: wrap;
+        justify-content: flex-end;
+        .menu-item:nth-child(n+6) a:hover {
+            color: $navred;
+        }
+    }
+    .wrap {
+        width: 90%;
+    }
+}
+
+.navbar-toggler-icon {
+    height: 1.8em;
+}
+.navbar-light {
+    .navbar-toggler {
+        border-color: transparent;
+        border: none;
+    }
+    .navbar-toggler-icon {
+        background-image: none !important;
+    }
+}
+
+/* Header Sub Nav */
+.support-link-padding {
+    background-color: $green !important;
+    a:hover {
+        color: $black !important;
+    }
+}
+header.site-header {
+    position: relative;
+    z-index: 1;
+}
+#header-sub.navbar-expand-md,
+#header-sub.navbar-expand-xl {
+    justify-content: flex-end;
+}
+#header-sub {
+    position: relative;
+    z-index: 500;
+    right: 5.5%;
+    margin-top: -57px;
+    .sm-nav-container {
+        position: absolute;
+        z-index: 501;
+        top: 105%;
+    }
+}
+#header-sub-nav {
+    li {
+        height: 40px;
+    }
+    li.support-link-padding {
+        height: 52px;
+        display: flex;
+        align-items: center;
+        margin-top: -6px;
+    }
+    position: relative;
+
+    #menu-sub-nav {
+
+        .nav-item {
+            background-color: $black;
+        }
+    }
+}
+/* Red Nav Color */
+.navbar-red {
+    .navbar-toggler {
+        color: rgba(0, 0, 0, .5);
+    }
+    background-color: $navred;
+}
+.bg-red {
+    background-color: $navred;
+}
+.navbar-purple {
+    background-color: $purple;
+}
+.bg-purple {
+    background-color: $purple;
+}
+.no-js .menu-item-has-children:hover .dropdown-menu,
+.no-js .menu-item-has-children:focus .dropdown-menu {
+    display: block;
+}
+/* Move navigation below wp-admin bar */
+.logged-in {
+    .navbar-fixed-top {
+        margin-top: 32px; // Move navigation below wp-admin bar
+    }
+}
+.navbar {
+    padding: {
+        left: 0;
+        right: 0;
+    }
+}
+/* Subnav  */
+#sub-nav-fp {
+    .navbar-collapse {
+        .navbar-nav {
+            margin: 0 auto;
+            a {
+                text-align: center;
+            }
+        }
+    }
+    .container-fluid {
+        button.navbar-toggler {
+            margin: 0 auto;
+        }
+    }
+    .container {
+        .navbar-toggler.subnav-toggler {
+            margin: 0 auto;
+        }
+        .subnav li a {
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        #menu-sub-nav {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+    }
+}
+/* Footer Nav */
+.site-footer .wrap {
+    display: flex;
+    align-items: baseline;
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    #sub-nav-fp {
+        .container {
+            .navbar-toggler.subnav-toggler {
+                margin: 0 auto;
+            }
+            .subnav li a {
+                font-size: 1rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+            #menu-sub-nav {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+@media (min-width: 1388px) {
+    .navbar-expand-xl {
+        .wrap {
+            #nav-primary {
+                .navbar-nav {
+                    .menu-item:nth-child(n+6) a {
+                        padding: 1rem;
+                    }
+                    .menu-item:nth-child(-n+5) a {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1432px) {
+    .navbar-expand-xl {
+        .wrap {
+            #nav-primary {
+                .navbar-nav {
+                    .menu-item:nth-child(n+6) a {
+                        padding: 0.5rem;
+                    }
+                    .menu-item:nth-child(-n+5) a {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1284px) {
+    .navbar-expand-xl {
+        .wrap {
+            #nav-primary {
+                .navbar-nav {
+                    .menu-item:nth-child(n+6) {
+                        background-color: $black;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1283px) and (min-width: 1200px) {
+    .navbar-expand-xl .navbar-nav {
+        justify-content: center;
+    }
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+
+@media (min-width: 1480px) {}
+
+@media (min-width: 1604px) {}
+
+@media (min-width: 1651px) {
+    #menu-upper-menu {
+        margin-bottom: -61px;
+    }
+}
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        width: 20%;
+    }
+}
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    .navbar-brand {
+        width: 20%;
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+    .navbar-expand-xl .navbar-nav {
+        display: inline-flex;
+        flex-flow: column;
+        justify-content: unset;
+    }
+    .navbar-brand {
+        img {
+            max-width: 70%;
+        }
+    }
+}
+
+@media (max-width: 1391px) {}
+
+@media (max-width: 1605px) {}
+
+
